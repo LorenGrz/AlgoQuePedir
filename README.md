@@ -72,6 +72,8 @@
   </p>
   <h2>Screenshots</h2>
   <img width="535" height="916" alt="image" src="https://github.com/user-attachments/assets/81bf0268-7f44-4634-98ec-355b3c4b7428" />
+  <img width="1919" height="1032" alt="image" src="https://github.com/user-attachments/assets/57f1a781-cf38-4e9d-8c99-ff8a0c52d21c" />
+  
 
 </body>
 </html>
