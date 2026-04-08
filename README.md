@@ -70,6 +70,8 @@
     Brindar una solución moderna y eficiente para la gestión de pedidos online,
     mejorando la experiencia tanto de usuarios como de comercios.
   </p>
+  <h2>Screenshots</h2>
+  <img width="535" height="916" alt="image" src="https://github.com/user-attachments/assets/81bf0268-7f44-4634-98ec-355b3c4b7428" />
 
 </body>
 </html>
