@@ -1,0 +1,50 @@
+/* HTML PARA INPUTS (Cambiar type de ser necesario)
+
+<div class="input-contenedor">
+    <label for="">Tu label <span>*</span></label>
+    <input type="text" placeholder="Escribir" id=""/>
+</div>
+
+Para espaciar un combo de inputs usar:
+
+margin: var(--margen-entre-inputs);
+o 
+gap: var(--margen-entre-inputs);
+
+*/
+
+.input-contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: var(--margen-input-label);
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  font-size: 0.9rem;
+}
+input,
+textarea {
+  min-height: var(--input-height);
+  border-radius: var(--radio-elementos);
+  border: 0.1rem solid var(--color-fuente-medio);
+  color: var(--color-fuente-medio);
+  width: 100%;
+  font-family: var(--font-family);
+  padding: 0 0.5rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+textarea{
+  padding-top: var(--margen-input-label);
+}
+
+/* Para que no afecte a las checkboxes!! [type="text"] [type="number"]*/
+input[type="text"]:focus,
+input[type="number"]:focus, textarea:focus {
+  outline: none;
+  border-color: #8a8a8a;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.15);
+}
+
+input[type="checkbox"] {
+  accent-color: #0d80f2;
+}

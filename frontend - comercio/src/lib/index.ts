@@ -1,0 +1,11 @@
+// place files you want to import through the `$lib` alias in this folder.
+export { default as Boton } from './components/Boton.svelte'
+export { default as Fieldset } from './components/Fieldset.svelte'
+export { default as Switch } from './components/Switch.svelte'
+export { default as PlatoMenu } from './components/Plato-menu.svelte'
+export { default as Checkbox } from './components/Checkbox.svelte'
+export { default as DireccionInfo } from './components/DireccionInfo.svelte'
+export { default as ClienteInfo } from './components/ClienteInfo.svelte'  
+export { default as TipoPago } from './components/TipoPago.svelte'
+export { default as Ojo } from './components/Ojo.svelte'
+export { default as Error } from './components/Error.svelte'

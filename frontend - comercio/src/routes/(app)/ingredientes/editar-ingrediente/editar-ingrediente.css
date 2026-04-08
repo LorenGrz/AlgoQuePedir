@@ -1,0 +1,61 @@
+.contenedor-editar-ingrediente {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* en lugar de center */ 
+  max-width: var(--ancho-contenedor);
+  width:100%;
+  margin: var(--margen-contenedor);
+}
+.tarjeta-form {
+  max-width: var(--ancho-contenedor);
+  display: flex;
+  justify-content: center;
+}
+
+.form-ingrediente {
+  width: 100%;
+  max-width: 32rem;
+  display: flex;
+  gap: var(--margen-entre-inputs);
+  flex-direction: column;
+}
+
+.contenedor-boton{
+  width: min(100%, var(--ancho-contenedor));
+  margin: 1rem auto 0;
+  padding-inline: var(--pad-lateral); /* alinea con la tarjeta */
+  display: flex;
+  justify-content: flex-end;          /* a la derecha */
+  align-items: center;
+}
+
+.contenedor-titulo {
+  width: 100%;
+  max-width: var(--ancho-contenedor);
+}
+
+.titulo {
+  font-size: 2rem;
+}
+
+/* desktop por defecto */
+.txt-mobile { display: none; }
+
+@media (max-width: 640px){ /* mobile */
+  .txt-desktop { 
+    display: none; 
+  }
+  .txt-mobile  { 
+    display: inline;
+  }
+  /* título a la izquierda como en el mock */
+  .contenedor-titulo{
+    align-self: stretch;
+    padding-inline: 1rem;
+  }
+  .contenedor-titulo .titulo{
+    margin: 0;
+    text-align: left;
+  }
+
+}

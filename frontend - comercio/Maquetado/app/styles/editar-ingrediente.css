@@ -1,0 +1,83 @@
+.contenedor-tarjeta{
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* en lugar de center */ 
+  max-width: var(--ancho-contenedor);
+  width:100%;
+  margin: var(--margen-contenedor);
+}
+.contenedor-titulo{                            
+  width: 100%;
+  max-width: var(--ancho-contenedor);      /* mismo ancho que la página */                            /* centrado del bloque */
+}           
+
+.tarjeta-form {
+  max-width: var(--ancho-contenedor);
+  display: flex;
+  justify-content: center;
+}
+
+.form-ingrediente {
+  width: 100%;
+  max-width: 32rem;
+  display: flex;
+  gap: var(--margen-entre-inputs);
+  flex-direction: column;
+}
+
+
+.input-contenedor{
+  width: 100%;
+}
+
+.input-contenedor select{
+  width: 100%;
+  height: var(--input-height, 2.5rem);
+  padding: 0 .75rem;
+  border: 0.1rem solid var(--color-secundario, #cccccc);
+  border-radius: var(--radio-elementos, .5rem);
+  background: var(--color-fondo, #ffffff);
+  box-sizing: border-box;
+  appearance: none;          /* limpia el select por defecto */
+}
+
+/* Tamaño y look del switch */
+.switch-contenedor{
+  display: inline-flex;          /* o flex si querés que sea bloque */
+  align-items: center;
+  gap: .630rem;                  /* espacio entre texto y palanca */
+  width: fit-content;            /* evita estirarse a 100% */
+  justify-content: flex-start;   
+  min-height: var(--input-height, 2.5rem);
+}
+
+.contenedor-boton{
+  width: min(100%, var(--ancho-contenedor));
+  margin: 1rem auto 0;
+  padding-inline: var(--pad-lateral); /* alinea con la tarjeta */
+  display: flex;
+  justify-content: flex-end;          /* a la derecha */
+  align-items: center;
+}
+
+/* desktop por defecto */
+.txt-mobile { display: none; }
+
+@media (max-width: 640px){ /* mobile */
+  .txt-desktop { 
+    display: none; 
+  }
+  .txt-mobile  { 
+    display: inline;
+  }
+  /* título a la izquierda como en el mock */
+  .contenedor-titulo{
+    align-self: stretch;
+    padding-inline: 1rem;
+  }
+  .contenedor-titulo .titulo{
+    margin: 0;
+    text-align: left;
+  }
+
+}

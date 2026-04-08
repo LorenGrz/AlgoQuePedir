@@ -1,0 +1,19 @@
+
+.ingredientes-contenedor {
+  max-width: var(--ancho-contenedor);
+  width: 95%;
+  height: 100%;
+  margin: var(--margen-contenedor);
+  font-weight: 400;
+  color: var(--color-fuente-medio);
+}
+
+.ingredientes-contenedor .contenedor-tabla-datos{
+  grid-template-columns: 2fr 2fr 2fr 1fr 1fr;
+}
+
+@media screen and (max-width: 640px) {
+  .ingredientes-contenedor .contenedor-tabla-datos{
+    grid-template-columns: 2fr 1fr 2fr;
+  }
+}

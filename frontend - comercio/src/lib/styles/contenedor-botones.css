@@ -1,0 +1,24 @@
+.titulo-boton-pildora {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contenedor-boton {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 1.5rem;
+  gap: 0.5rem;
+}
+
+/* Breakpoint mobile */
+@media (max-width: 640px) {
+  .contenedor-boton {
+    padding: 0;
+  }
+  .titulo-boton-pildora  {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--margen-entre-inputs);
+  }
+}

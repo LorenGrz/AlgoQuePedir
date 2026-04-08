@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Fuente Work Sans  -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/globales/styles.css" />
+    <link rel="stylesheet" href="./styles/globales/botones.css"/>
+    <link rel="stylesheet" href="./styles/globales/grids.css" />
+    <link rel="stylesheet" href="./styles/globales/switch-input.css" />
+    <link rel="stylesheet" href="./styles/globales/input.css">
+    <link rel="stylesheet" href="./styles/editar-plato.css" />
+     <link rel="stylesheet" href="./styles/navbar.css" />
+  </head>
+  
+  <body>
+      <!-- Barra de navegación -->
+    <header>
+      <div class="navbar-header">
+        <div class="navbar-logo-y-titulo" >
+            <img src="../assets/icons/cocina.svg" alt="" />
+            <h1 class="navbar-titulo-logo">Algo Que Pedir</h1>
+        </div>
+        <div class="navbar-menus-tablet-desktop navbar-links">
+          <a class="active" href="#">Pedidos</a>
+          <nav class="navbar-container">
+              <input type="checkbox" id="menu-toggle">
+              <label for="menu-toggle">
+                <img src="../assets/icons/menu.svg" alt="Menú" class="menu-icon">
+              </label>
+              <ul  class="menu navbar-links">
+                <li><a href="#">Menú</a></li>
+                <li><a href="#">Ingredientes</a></li>
+                <li><a href="#">Cuenta</a></li>
+              </ul>
+          </nav>
+          <img src="../assets/icons/usuario.svg" alt="" />
+        </div>
+      </div>
+      <nav class="nav-footer ">
+          <a href=""><img src="../assets/icons/cocina.svg" alt="" /></a>
+          <a href=""><img src="../assets/icons/carrito-de-compras.svg" alt="" /></a>
+          <a href=""><img src="../assets/icons/cubiertos.svg" alt="" /></a>
+          <a href=""><img src="../assets/icons/helado.svg" alt="" /></a>
+          <a href=""><img src="../assets/icons/usuario.svg" alt="" /></a>
+      </nav>
+    </header>
+  
+    <div class="contenedor-editar-plato">
+      <h1>Editar Plato</h1>
+
+      <section class="contenedor-imagen-inputs contenedor">
+        <div class="inputs-contenedor">
+          <div>
+            <label for="inp-plato-nombre">Nombre del platos <span>*</span></label>
+            <input type="text" id="inp-plato-nombre"/>
+          </div>
+          <div class="textarea-contenedor">
+            <label for="inp-plato-desc">Descripcion <span>*</span></label>
+            <textarea name="" id="inp-plato-desc"></textarea>
+          </div>
+          <div >
+            <label for="inp-plato-url">URL de la imagen del plato <span>*</span></label>
+            <input type="text" id="inp-plato-url" />
+          </div>
+        </div>
+
+        <div class="img-contenedor">
+          <img src="../assets/images/hamburga.jpg" alt="Burga" />
+        </div>
+      </section>
+
+      <section class="contenedor">
+        <h2>Costos</h2>
+
+        <div>
+          <label class="label" for="inp-plato-precio">Precio Base <span>*</span></label>
+          <input type="number" id="inp-plato-precio" />
+        </div>
+
+        <div class="switch-contenedor">
+          <div>
+            <label for="chk-plato-autor" class="fuente-oscuro">Plato de Autor</label>
+            <p>Aplica un porcentaje adicional al precio de venta</p>
+          </div>
+          <label class="switch-input">
+            <input type="checkbox" id="chk-plato-autor" />
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class="switch-contenedor">
+          <div>
+            <label for="chk-plato-promocion" class="fuente-oscuro">Plato de Promocion</label>
+            <p>Aplica un descuento al precio de venta</p>
+          </div>
+          <label class="switch-input">
+            <input type="checkbox" id="chk-plato-promocion" />
+            <span class="slider"></span>
+          </label>
+        </div>
+      </section>
+
+      <section class="contenedor">
+        <h2>Ingredientes</h2>
+        <div>
+          <span class="precio">Costo de Produccion</span><span>$ 100</span>
+        </div>
+
+        <div class="grid-contenedor">
+          <div class="header">Nombre</div>
+          <div class="header">Grupo alimenticio</div>
+          <div class="centrado header">Origen</div>
+          <div class="centrado header">Acciones</div>
+
+          <div class="fuente-oscuro">Carne de Res</div>
+          <div class="fuente-oscuro">Proteinas</div>
+          <div class="centrado">
+            <div class="icon">
+              <img src="../assets/icons/proteina.svg" alt="" />
+            </div>
+          </div>
+          <div class="centrado">
+            <div class="icon">
+              <img src="../assets/icons/eliminar.svg" alt="eliminar" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="contenedor-boton">
+        <button class="boton-primario"> Guardar Cambios </button>
+        <button class="boton-secundario">Descartar Cambios</button>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,146 @@
+.detalle-pedido {
+  max-width: var(--ancho-contenedor);
+  width: 100%;
+  margin: var(--margen-contenedor);
+}
+.contenedor {
+  margin-top: var(--margen-contenedor);
+}
+.estado-pedido {
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+/* Título de sección consistente */
+.titulo-seccion {
+  margin: 0.25rem 0 0.75rem;
+}
+
+.subtitulos{
+  font-size: 0.92em;
+  color: var(--color-fuente-medio);
+  margin-bottom: 0.25em;
+}
+
+/* ====== ESTILOS ENCABEZADO ====== */
+.encabezado-pedido .etiqueta-estado {
+  font-weight: 600; /* le doy un grosor  */
+  color: var(--color-fuente-fuerte);
+}
+
+/* Pill del estado */
+.badge-estado {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.4rem 1.25rem;
+  border-radius: 9999px; /* forma de píldora */
+  background: var(--color-terciario); /* naranja Figma */
+  color: var(--color-fuente-suave); /* texto blanco */
+  width: 12rem;
+}
+
+/* ====== ESTILOS DATOS DEL CLIENTE Y DE LA DIRECCION ====== */
+
+.bloque-doble {
+  display: flex;
+  justify-content: space-between;
+  
+}
+.seccion-cliente {
+  flex-grow: 1;
+}
+/* ====== Dirección: icono + texto en la MISMA fila ====== */
+.seccion-direccion {
+  display: grid;
+  grid-template-columns: auto 1fr; /* icono | textos */
+  grid-auto-rows: min-content;
+  column-gap: 0.75rem;
+  row-gap: 0.5rem;
+}
+
+/* ====== ESTILOS RESUMEN DEL PEDIDO ====== */
+
+/* ===== Resumen del Pedido (3 columnas) ===== */
+.grid-contenedor.resumen-pedido {
+  grid-template-columns: 3fr 1fr 1fr; /* Plato / Cantidad / Precio */
+}
+
+.grid-contenedor.resumen-pedido > div:nth-child(3n-1) {
+  /* columna Cantidad */
+  justify-content: center;
+  text-align: center;
+}
+.grid-contenedor.resumen-pedido > div:nth-child(3n) {
+  /* columna Precio */
+  justify-content: flex-end;
+  text-align: right;
+}
+
+/* Media del plato (imagen + textos) */
+.resumen-pedido .imagen-plato img {
+  width: 4.375rem;
+  height: 3.75rem;
+  object-fit: cover;
+}
+
+/* ====== ESTILOS DE PAGO  y METODOS DE PAGO ====== */
+/* ====== UTILIZO CSS COMPARTIDO DE PLATO-MENU ====== */
+
+.separador-precio {
+  margin-bottom: var(--margen-entre-inputs);
+}
+
+/* ====== ESTILOS BOTON ====== */
+
+.acciones-final {
+  width: 100%;
+  max-width: var(--ancho-contenedor);
+  margin: 1rem auto;
+}
+
+.botonera {
+  display: flex;
+  justify-content: flex-end; 
+  margin-top: var(--margen-contenedor);
+}
+
+.botonera .boton-primario {
+  flex: 0 0 auto; 
+  min-width: 9.5rem; 
+  height: 2.75rem; 
+  font-size: 1rem; 
+}
+
+/* MOBILE*/
+@media (max-width: 640px) {
+  .badge-estado {
+    width: 10rem;
+  }
+  .bloque-doble {
+    flex-direction: column;
+  }
+.encabezado-pedido{
+  margin: var(--margen-entre-inputs);
+}
+ .estado-pedido{
+  margin-top: var(--margen-entre-inputs);
+ }
+  
+  .resumen-pedido .imagen-plato {
+    display: none;
+  }
+
+  .botonera {
+    justify-content: flex-end;
+  } 
+  .botonera .boton-primario {
+    margin: var(--margen-entre-inputs);
+  } 
+
+  .seccion-cliente {
+    margin-bottom: 1rem;
+  }
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/globales/styles.css" />
+    <link rel="stylesheet" href="./styles/navbar.css" />
+    <link rel="stylesheet" href="./styles/globales/switch-input.css" />
+    <link rel="stylesheet" href="./styles/globales/botones.css"/>
+    <link rel="stylesheet" href="./styles/editar-plato.css" />
+    <link rel="stylesheet" href="./styles/globales/input.css">
+    <link rel="stylesheet" href="./styles/editar-ingrediente.css" />
+</head>
+<body>
+  <!-- Barra de navegación -->
+  <header>
+    <div class="navbar-header">
+      <div class="navbar-logo-y-titulo" >
+          <img src="../assets/icons/cocina.svg" alt="" />
+          <h1 class="navbar-titulo-logo">Algo Que Pedir</h1>
+      </div>
+      <div class="navbar-menus-tablet-desktop navbar-links">
+        <a class="active" href="#">Pedidos</a>
+        <nav class="navbar-container">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle">
+              <img src="../assets/icons/menu.svg" alt="Menú" class="menu-icon">
+            </label>
+            <ul  class="menu navbar-links">
+              <li><a href="#">Menú</a></li>
+              <li><a href="#">Ingredientes</a></li>
+              <li><a href="#">Cuenta</a></li>
+            </ul>
+        </nav>
+        <img src="../assets/icons/usuario.svg" alt="" />
+      </div>
+    </div>
+    <nav class="nav-footer ">
+        <a href=""><img src="../assets/icons/cocina.svg" alt="" /></a>
+        <a href=""><img src="../assets/icons/carrito-de-compras.svg" alt="" /></a>
+        <a href=""><img src="../assets/icons/cubiertos.svg" alt="" /></a>
+        <a href=""><img src="../assets/icons/helado.svg" alt="" /></a>
+        <a href=""><img src="../assets/icons/usuario.svg" alt="" /></a>
+    </nav>
+  </header>
+  <article class="contenedor-tarjeta  ">
+    <!-- Título fuera de la tarjeta -->
+    <div class="contenedor-titulo">
+      <h1 class="titulo">Editar ingrediente</h1>
+    </div>
+
+    <!-- Tarjeta blanca con el formulario -->
+    <section class="contenedor  tarjeta-form">
+      <form id="form" class="form-ingrediente" method="post" novalidate>
+
+          <!-- Nombre del ingrediente -->
+          <div class="input-contenedor">
+            <label class="label" for="nombre-ingrediente">Nombre del Ingrediente<span>*</span></label>
+            <input id="nombre-ingrediente" name="nombre" type="text" placeholder="Lechuga" required />
+          </div>
+
+          <!-- Costo -->
+          <div class="input-contenedor">
+            <label class="label" for="costo">Costo<span>*</span></label>
+            <input id="costo" name="costo" type="number" inputmode="decimal" step="0.01" min="0" placeholder="$5" required />
+          </div>
+
+          <!-- Grupo alimenticio -->
+          <div class="input-contenedor">
+            <label class="label" for="grupo">Grupo Alimenticio</label>
+            <select id="grupo" name="grupo" required>
+              <option value="" selected disabled>Seleccion</option>
+              <option value="vegetales">Vegetales</option>
+              <option value="frutas">Frutas</option>
+              <option value="carnes">Carnes</option>
+              <option value="lacteos">Lácteos</option>
+              <option value="cereales">Cereales</option>
+              <option value="otros">Otros</option>
+            </select>
+          </div>
+
+          <!-- Origen animal (switch) -->
+          <div class="switch-contenedor">
+            <label for="origen-animal">Origen animal</label>
+            <label class="switch-input">
+              <input id="origen-animal" name="origen_animal" type="checkbox" role="switch" />
+              <span class="slider"></span>
+            </label>
+          </div>
+        
+      </form>
+    </section>
+
+    <!-- Botonera fuera de la tarjeta, alineada a la derecha -->
+    <footer class="contenedor-boton">
+      <button type="submit" form="form-ingrediente" class="boton-primario">
+        <span class="txt-desktop">Guardar Cambios</span>
+        <span class="txt-mobile">Guardar</span>
+      </button>
+      <button type="reset" form="form-ingrediente" class="boton-secundario">
+        <span class="txt-desktop">Descartar cambios</span>
+        <span class="txt-mobile">Descartar</span>
+      </button>
+    </footer>
+  </article>
+</body>
+</html>

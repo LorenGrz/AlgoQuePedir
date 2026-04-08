@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión del Menú</title>
+    <!-- Fuente Work Sans  -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Estilos -->
+    <link rel="stylesheet" href="./styles/globales/styles.css" />
+    <link rel="stylesheet" href="./styles/globales/botones.css" />
+    <link rel="stylesheet" href="./styles/globales/plato-menu.css" />
+    <link rel="stylesheet" href="./styles/navbar.css" />
+    <link rel="stylesheet" href="./styles/gestion-menu.css" />
+  </head>
+  <body>
+    <!-- Barra de navegación -->
+    <header>
+      <div class="navbar-header">
+        <div class="navbar-logo-y-titulo" >
+            <img src="../assets/icons/cocina.svg" alt="" />
+            <h1 class="navbar-titulo-logo">Algo Que Pedir</h1>
+        </div>
+        <div class="navbar-menus-tablet-desktop navbar-links">
+          <a class="active" href="#">Pedidos</a>
+          <nav class="navbar-container">
+              <input type="checkbox" id="menu-toggle">
+              <label for="menu-toggle">
+                <img src="../assets/icons/menu.svg" alt="Menú" class="menu-icon">
+              </label>
+              <ul  class="menu navbar-links">
+                <li><a href="#">Menú</a></li>
+                <li><a href="#">Ingredientes</a></li>
+                <li><a href="#">Cuenta</a></li>
+              </ul>
+          </nav>
+          <img src="../assets/icons/usuario.svg" alt="" />
+        </div>
+      </div>
+      <nav class="nav-footer ">
+          <a href=""><img src="../assets/icons/cocina.svg" alt="" /></a>
+          <a href=""><img src="../assets/icons/carrito-de-compras.svg" alt="" /></a>
+          <a href=""><img src="../assets/icons/cubiertos.svg" alt="" /></a>
+          <a href=""><img src="../assets/icons/helado.svg" alt="" /></a>
+          <a href=""><img src="../assets/icons/usuario.svg" alt="" /></a>
+      </nav>
+    </header>
+    <section class="contenedor-gestion-menu">
+      <header class="titulo-boton-pildora">
+        <h1>Gestión del Menú</h1>
+        <button class="boton-pildora">Agregar Nuevo Plato</button>
+      </header>
+
+      <h2>Platos Disponibles</h2>
+      <section class="contenedor-menu contenedor">
+        <article class="separador-precio">
+          <div class="plato-menu">
+            <div class="imagen-plato">
+              <img src="../assets/images/pasta.jpg" alt="" />
+            </div>
+            <div class="plato-info">
+              <p>Pasta Cremosa</p>
+              <p class="plato-descripcion">Deliciosa pasta con salsa cremosa</p>
+            </div>
+          </div>
+          <span class="precio-plato-menu">$12.99</span>
+        </article>
+
+        <article class="separador-precio">
+          <div class="plato-menu">
+            <div class="imagen-plato">
+              <img src="../assets/images/alitas.jpg" alt="" />
+            </div>
+            <div class="plato-info">
+              <p>Alitas Picantes</p>
+              <p class="plato-descripcion">
+                Alitas de pollo picantes con salsa para mojar
+              </p>
+            </div>
+          </div>
+          <span class="precio-plato-menu">$9.99</span>
+        </article>
+
+        <article class="separador-precio">
+          <div class="plato-menu">
+            <div class="imagen-plato">
+              <img src="../assets/images/ensalada.jpg" alt="" />
+            </div>
+            <div class="plato-info">
+              <p>Ensalada de la Huerta</p>
+              <p class="plato-descripcion">
+                Ensalada fresca con hojas mixtas y vinagreta
+              </p>
+            </div>
+          </div>
+          <span class="precio-plato-menu">$7.50</span>
+        </article>
+
+        <article class="separador-precio">
+          <div class="plato-menu">
+            <div class="imagen-plato">
+              <img src="../assets/images/hamburga.jpg" alt="" />
+            </div>
+            <div class="plato-info">
+              <p>Hamburguesa con Queso</p>
+              <p class="plato-descripcion">
+                Hamburguesa clásica con queso y papas fritas
+              </p>
+            </div>
+          </div>
+          <span class="precio-plato-menu">$10.50</span>
+        </article>
+
+        <article class="separador-precio">
+          <div class="plato-menu">
+            <div class="imagen-plato">
+              <img src="../assets/images/pescado.jpg" alt="" />
+            </div>
+            <div class="plato-info">
+              <p>Pescado y Papas Fritas</p>
+              <p class="plato-descripcion">
+                Pescado crujiente y papas fritas con salsa tártara
+              </p>
+            </div>
+          </div>
+          <span class="precio-plato-menu">$11.75</span>
+        </article>
+
+        <article class="separador-precio">
+          <div class="plato-menu">
+            <div class="imagen-plato">
+              <img src="../assets/images/pizza.jpg" alt="" />
+            </div>
+            <div class="plato-info">
+              <p>Pizza Vegetariana</p>
+              <p class="plato-descripcion">
+                Pizza vegetariana con ingredientes variados
+              </p>
+            </div>
+          </div>
+          <span class="precio-plato-menu">$14.25</span>
+        </article>
+
+        <article class="separador-precio">
+          <div class="plato-menu">
+            <div class="imagen-plato">
+              <img src="../assets/images/pastel.jpg" alt="" />
+            </div>
+            <div class="plato-info">
+              <p>Pastel de Chocolate</p>
+              <p class="plato-descripcion">
+                Pastel de chocolate rico con glaseado
+              </p>
+            </div>
+          </div>
+          <span class="precio-plato-menu">$6.50</span>
+        </article>
+      </section>
+    </section>
+  </body>
+</html>

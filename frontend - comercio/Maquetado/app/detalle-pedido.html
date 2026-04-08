@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalle del Pedido</title>
+
+    <!-- Fuente Work Sans  -->
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    
+    <link rel="stylesheet" href="./styles/globales/styles.css" />
+    <link rel="stylesheet" href="./styles/globales/grids.css" />
+    <link rel="stylesheet" href="./styles/globales/botones.css"/>
+    <link rel="stylesheet" href="./styles/globales/plato-menu.css" />
+    <link rel="stylesheet" href="./styles/navbar.css" />
+    <link rel="stylesheet" href="./styles/infoCliente.css" />
+    <link rel="stylesheet" href="./styles/detalle-pedido.css" />
+  </head>
+
+  <body>
+      <!-- Barra de navegación -->
+   <header>
+      <div class="navbar-header">
+        <div class="navbar-logo-y-titulo" >
+            <img src="../assets/icons/cocina.svg" alt="" />
+            <h1 class="navbar-titulo-logo">Algo Que Pedir</h1>
+        </div>
+        <div class="navbar-menus-tablet-desktop navbar-links">
+          <a class="active" href="#">Pedidos</a>
+          <nav class="navbar-container">
+              <input type="checkbox" id="menu-toggle">
+              <label for="menu-toggle">
+                <img src="../assets/icons/menu.svg" alt="Menú" class="menu-icon">
+              </label>
+              <ul  class="menu navbar-links">
+                <li><a href="#">Menú</a></li>
+                <li><a href="#">Ingredientes</a></li>
+                <li><a href="#">Cuenta</a></li>
+              </ul>
+          </nav>
+          <img src="../assets/icons/usuario.svg" alt="" />
+        </div>
+      </div>
+      <nav class="nav-footer ">
+          <a href=""><img src="../assets/icons/cocina.svg" alt="" /></a>
+          <a href=""><img src="../assets/icons/carrito-de-compras.svg" alt="" /></a>
+          <a href=""><img src="../assets/icons/cubiertos.svg" alt="" /></a>
+          <a href=""><img src="../assets/icons/helado.svg" alt="" /></a>
+          <a href=""><img src="../assets/icons/usuario.svg" alt="" /></a>
+      </nav>
+    </header>
+      <article class="detalle-pedido">
+      <!-- ENCABEZADO-->
+        <section class="encabezado-pedido">
+          <div class="bloque-doble ">
+            <h1>Pedido #12345</h1>
+
+            <div class="estado-pedido">
+              <span class="etiqueta-estado">Estado del pedido</span>
+              <span class="badge-estado">Pendiente</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Cliente + Dirección -->
+        <section class="contenedor">
+          <div class="bloque-doble">
+
+            <section class="seccion-cliente">
+              <h2 class="titulo-seccion">Cliente</h2>
+              <section class="usuario-foto-container">
+                <img class="foto-cliente" src="../assets/images/negra-maqueta.jpg" alt="">
+                <div>
+                  <h3>Sofía Miller</h3>
+                  <p class="color-medio">@sofia.miller2005</p>
+                </div>
+              </section>
+            </section>
+
+           <section class="seccion-cliente">
+                <h2 class="titulo-seccion">Dirección de Entrega</h2>
+               <section class="direccion-usuario">
+              <img class="icono-ubicacion" src="../assets/icons/ubicacion.svg" alt="" />
+              <address>
+                <p>Av. Siempre Viva 555</p>
+                <p class="color-medio">Lat: 40.7128, Long: -74.0060</p>
+              </address>
+        </section>
+            </section>
+
+          </div>
+        </section>
+
+        <!-- RESUMEN PEDIDO -->
+        <section class="contenedor">
+          <h2 class="titulo-seccion">Resumen del Pedido</h2>
+          <div class="grid-contenedor resumen-pedido">
+            
+            <!-- Cabeceras -->
+            <div class="header">Plato</div>
+            <div class="header centrado">Cantidad</div>
+            <div class="header centrado">Precio</div>
+
+            <!-- ITEM 1 -->
+            <div class="plato-menu">
+            <div class="imagen-plato">
+              <img src="../assets/images/hamburga.jpg" alt="" />
+            </div>
+            <div class="plato-info">
+              <p>Hamburguesa con Queso</p>
+              <p class="plato-descripcion">
+                Hamburguesa clásica con queso y papas fritas
+              </p>
+            </div>
+          </div>
+            <div class=" centrado subtitulos">1</div>
+            <div class=" centrado subtitulos">$12.00</div>
+
+            <!-- ITEM 2 -->
+            <div class="plato-menu">
+            <div class="imagen-plato">
+              <img src="../assets/images/hamburga.jpg" alt="" />
+            </div>
+            <div class="plato-info">
+              <p>Papas Fritas</p>
+              <p class="plato-descripcion">
+                Tradicionales papas fritas crocantes
+              </p>
+            </div>
+          </div>
+            <div class="centrado subtitulos">1</div>
+            <div class="centrado subtitulos">$6.00</div>
+
+            <!-- ITEM 3 -->
+            <div class="plato-menu">
+            <div class="imagen-plato">
+              <img src="../assets/images/hamburga.jpg" alt="" />
+            </div>
+            <div class="plato-info">
+              <p>Refresco</p>
+              <p class="plato-descripcion">
+                Jugo natural de fruta
+              </p>
+            </div>
+          </div>
+            <div class="centrado subtitulos">1</div>
+            <div class="centrado subtitulos">$3.00</div>
+
+          </div>
+        </section>
+
+       <!-- PAGO -->
+        <section class="contenedor ">
+          <h2 class="titulo-seccion">Pago</h2>
+          <section>
+            <!-- Subtotal -->
+            <div class="separador-precio">
+              <div>Subtotal</div>
+              <div>$20.00</div>
+            </div>
+
+            <div class="separador-precio">
+              <div>Comisión del delivery</div>
+              <div>$2.00</div>
+            </div>
+
+            <div class="separador-precio">
+              <div>Incremento por tipo de pago</div>
+              <div>$1.10</div>
+            </div>
+
+            <div class="separador-precio">
+              <div>Total</div>
+              <div>$23.10</div>
+            </div>
+          </section>
+
+          <!-- Método de pago -->
+          <section class="">
+            <h2 class="titulo-seccion">Método de pago</h2>
+            <p class="tipo-de-pago">
+              <span class="icono-tipo-pago">
+                <img src="../assets/icons/pago-tarjeta-secundario.svg" alt="Pago con tarjeta de crédito" />
+              </span>
+              Pago con tarjeta de crédito
+            </p>
+          </section>
+
+        </section>
+        
+          <!-- Seccion del boton  -->
+        <footer class="botonera">
+          <button class="boton-primario ">Volver</button>
+        </footer>
+
+      </article> 
+  </body>
+</html>

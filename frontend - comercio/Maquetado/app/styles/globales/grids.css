@@ -1,0 +1,57 @@
+/*  EJEMPLO DE USO HTML
+  <div class="grid-contenedor">
+    <div class="header">TITULO</div>
+    <div class="centrado">
+      <div class="icon">
+        <img src="../assets/icons/proteina.svg" alt="" />
+      </div>
+    </div>
+  </div>
+*/
+.grid-contenedor {
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: 2fr 3fr 1fr 1fr;
+  align-items: center;
+  border: 0.1rem solid var(--color-borde-suave);
+  border-radius: var(--radio-contenedor);
+  overflow-x: auto;
+}
+.grid-contenedor > div {
+  align-self: center;
+  border-top: 0.1rem solid var(--color-borde-suave);
+  min-height: 3em;
+  height: 100%;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+.grid-contenedor .header {
+  font-weight: 600;
+  color: var(--color-fuente-fuerte);
+  border-top: none;
+}
+.icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: pointer;
+}
+.centrado {
+  justify-content: center;
+}
+
+.contenedor-imagen-inputs {
+  display: flex;
+  gap: var(--margen-entre-inputs);
+}
+
+@media screen and (max-width: 640px) {
+  .grid-contenedor .ocultar-mobile {
+    display: none;
+  }
+  .contenedor-imagen-inputs {
+    flex-direction: column;
+  }
+}

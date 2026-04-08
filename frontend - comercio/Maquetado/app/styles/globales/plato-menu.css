@@ -1,0 +1,30 @@
+.plato-menu {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.plato-menu .plato-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-weight: 500;
+  color: var(--color-fuente-fuerte);
+}
+.plato-menu .plato-info .plato-descripcion {
+  color: var(--color-fuente-rojita);
+  font-size: 0.9rem;
+  font-weight: 100;
+}
+
+.separador-precio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--margen-entre-inputs);
+}
+
+@media (max-width: 640px) {
+  .plato-menu .plato-info .plato-descripcion {
+    display: none;
+  }
+}

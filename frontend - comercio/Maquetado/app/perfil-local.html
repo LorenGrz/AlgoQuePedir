@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil del local</title>
+    <!-- Fuente Work Sans  -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/globales/styles.css" />
+    <link rel="stylesheet" href="./styles/globales/botones.css" />
+    <link rel="stylesheet" href="./styles/globales/input.css">
+    <link rel="stylesheet" href="./styles/globales/grids.css">
+    <link rel="stylesheet" href="./styles/navbar.css" />
+    <link rel="stylesheet" href="./styles/perfil-local.css" />
+  </head>
+  <body>
+   <!-- Barra de navegación -->
+    <header>
+      <div class="navbar-header">
+        <div class="navbar-logo-y-titulo" >
+            <img src="../assets/icons/cocina.svg" alt="" />
+            <h1 class="navbar-titulo-logo">Algo Que Pedir</h1>
+        </div>
+        <div class="navbar-menus-tablet-desktop navbar-links">
+          <a class="active" href="#">Pedidos</a>
+          <nav class="navbar-container">
+              <input type="checkbox" id="menu-toggle">
+              <label for="menu-toggle">
+                <img src="../assets/icons/menu.svg" alt="Menú" class="menu-icon">
+              </label>
+              <ul  class="menu navbar-links">
+                <li><a href="#">Menú</a></li>
+                <li><a href="#">Ingredientes</a></li>
+                <li><a href="#">Cuenta</a></li>
+              </ul>
+          </nav>
+          <img src="../assets/icons/usuario.svg" alt="" />
+        </div>
+      </div>
+      <nav class="nav-footer ">
+          <a href=""><img src="../assets/icons/cocina.svg" alt="" /></a>
+          <a href=""><img src="../assets/icons/carrito-de-compras.svg" alt="" /></a>
+          <a href=""><img src="../assets/icons/cubiertos.svg" alt="" /></a>
+          <a href=""><img src="../assets/icons/helado.svg" alt="" /></a>
+          <a href=""><img src="../assets/icons/usuario.svg" alt="" /></a>
+      </nav>
+    </header>
+    <section class="contenedor-perfil">
+      <h1>Información del local</h1>
+      <article class="contenedor-imagen-inputs contenedor">
+        <div class="identidad-input">
+          <div class="input-contenedor">
+            <label for="nombre-local">Nombre del local <span>*</span></label>
+            <input type="text" placeholder="Escribir" id="nombre-local"/>
+          </div>
+          <div class="input-contenedor">
+            <label for="img-local">URL de la imagen <span>*</span></label>
+            <input type="text" placeholder="Escribir" id="img-local"/>
+          </div>
+        </div>
+        <div class="img-local">
+          <img src="../assets/images/imagen-local.jpg" alt="Burga" />
+        </div>
+      </article>
+
+      <article class="datos-direccion contenedor">
+        <h2>Dirección</h2>
+        <div class="fila-input">
+          <div class="input-contenedor">
+            <label for="direccion-local">Dirección <span>*</span></label>
+            <input type="text" placeholder="Escribir" id="direccion-local"/>
+          </div>
+          <div class="input-contenedor">
+            <label for="altura-local">Altura <span>*</span></label>
+            <input type="number" placeholder="Escribir" id="altura-local"/>
+          </div>
+        </div>
+        <div class="fila-input">
+          <div class="input-contenedor">
+            <label for="latitud-local">Latitud <span>*</span></label>
+            <input type="number" placeholder="Escribir" id="latitud-local" />
+          </div>
+          <div class="input-contenedor">
+            <label for="longitud-local">Longitud <span>*</span></label>
+            <input type="number" placeholder="Escribir" id="longitud-local"/>
+          </div>
+        </div>
+      </article>
+
+      <article class="contenedor-porcentajes-metodos contenedor">
+        <h2>Porcentajes</h2>
+        <div class="fila-input">
+          <div class="input-contenedor">
+            <label for="porcentaje-local">Porcentaje de comisión con la app <span>*</span></label>
+            <input type="number" placeholder="Escribir" id="porcentaje-local" />
+          </div>
+          <div class="input-contenedor">
+            <label for="porcentaje-autores-local">Porcentaje de comisión con autores de platos <span>*</span></label>
+            <input type="number" placeholder="Escribir" id="porcentaje-autores-local" />
+          </div>
+        </div>
+        <h2>Métodos de pago</h2>
+        <div class="container-checkboxes-local">
+          <div class="checkbox-local">
+            <input type="checkbox" id="efectivo" />
+            <label for="efectivo">Efectivo</label>
+          </div>
+
+          <div class="checkbox-local">
+            <input type="checkbox" id="QR" />
+            <label for="QR">QR</label>
+          </div>
+
+          <div class="checkbox-local">
+            <input type="checkbox" id="transferencia" />
+            <label for="transferencia">Transferencia</label>
+          </div>
+        </div>
+      </article>
+      <div class="contenedor-boton">
+        <div class="boton-primario">Guardar Cambios</div>
+        <div class="boton-secundario">Descartar Cambios</div>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+/* FORMA DE USO 
+con row componenete, tambien se puede hacer en el html
+  const ingredienteTablaHeader: TablaDatosHeaderModel[] = [
+    { nombre: 'Nombre' },
+    { nombre: 'Acciones', clases: 'centrado' }
+  ]
+
+    <div class="contenedor-tabla-datos">
+      {#each ingredienteTablaHeader as header}
+        <div class={`header ${header.clases}`}>{header.nombre}</div>
+      {/each}
+
+      {#each ingredientes as item}
+        <IngredienteTablaFila {item} fromPaginaIngrediente={false} />
+      {/each}
+    </div>
+*/
+
+/* -------- ESTILOS DE Tabla-datos -------- */
+.contenedor-tabla-datos {
+  display: grid;
+  align-items: center;
+  border: 0.1rem solid var(--color-borde-suave);
+  border-radius: var(--radio-contenedor);
+  overflow-x: auto;
+}
+.contenedor-tabla-datos > div {
+  align-self: center;
+  border-top: 0.1rem solid var(--color-borde-suave);
+  min-height: 3em;
+  height: 100%;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+.contenedor-tabla-datos .header {
+  font-weight: 600;
+  color: var(--color-fuente-fuerte);
+  border-top: none;
+}
+
+/* -------- pueden ir en los componentes ROW -------- */
+.icon {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+.boton-sin-estilo {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.centrado {
+  justify-content: center;
+}
+.mostrar-mobile {
+  display: none;
+} 
+
+/* -------- layout de perfil y plato -------- */
+.contenedor-imagen-inputs {
+  display: flex;
+  gap: var(--margen-entre-inputs);
+}
+
+@media screen and (max-width: 640px) {
+  .contenedor-tabla-datos .ocultar-mobile {
+    display: none;
+  }
+  .contenedor-imagen-inputs {
+    flex-direction: column;
+  }
+  .mostrar-mobile {
+    display: flex;
+  }
+}

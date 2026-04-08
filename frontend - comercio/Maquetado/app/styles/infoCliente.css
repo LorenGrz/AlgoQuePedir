@@ -1,0 +1,47 @@
+.color-secundario {
+  color: var(--color-secundario);
+}
+.color-medio {
+  color: var(--color-fuente-medio);
+}
+.foto-cliente {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
+}
+.usuario-foto-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+.icono-ubicacion{
+  border-radius: var(--radio-elementos);
+  background: var(--color-background);
+  display:flex; 
+  align-items:center;
+  justify-content:center;
+  margin: 0;  
+  width:1.5em;
+  height:1.5em;                        /* evita que baje */
+}
+.direccion-usuario {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2em;
+}
+
+.tipo-de-pago {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+.icono-tipo-pago{
+  width: 1.5rem;
+  cursor: pointer;
+}

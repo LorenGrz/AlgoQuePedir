@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ingredientes</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/globales/styles.css" />
+    <link rel="stylesheet" href="./styles/globales/grids.css" />
+    <link rel="stylesheet" href="./styles/globales/botones.css"/>
+    <link rel="stylesheet" href="./styles/navbar.css" />
+    <link rel="stylesheet" href="./styles/ingredientes.css">
+  </head>
+ 
+  <body>
+    <!-- Barra de navegación -->
+    <header>
+      <div class="navbar-header">
+        <div class="navbar-logo-y-titulo" >
+            <img src="../assets/icons/cocina.svg" alt="" />
+            <h1 class="navbar-titulo-logo">Algo Que Pedir</h1>
+        </div>
+        <div class="navbar-menus-tablet-desktop navbar-links">
+          <a class="active" href="#">Pedidos</a>
+          <nav class="navbar-container">
+              <input type="checkbox" id="menu-toggle">
+              <label for="menu-toggle">
+                <img src="../assets/icons/menu.svg" alt="Menú" class="menu-icon">
+              </label>
+              <ul  class="menu navbar-links">
+                <li><a href="#">Menú</a></li>
+                <li><a href="#">Ingredientes</a></li>
+                <li><a href="#">Cuenta</a></li>
+              </ul>
+          </nav>
+          <img src="../assets/icons/usuario.svg" alt="" />
+        </div>
+      </div>
+      <nav class="nav-footer ">
+          <a href=""><img src="../assets/icons/cocina.svg" alt="" /></a>
+          <a href=""><img src="../assets/icons/carrito-de-compras.svg" alt="" /></a>
+          <a href=""><img src="../assets/icons/cubiertos.svg" alt="" /></a>
+          <a href=""><img src="../assets/icons/helado.svg" alt="" /></a>
+          <a href=""><img src="../assets/icons/usuario.svg" alt="" /></a>
+      </nav>
+    </header>
+    <div class="ingredientes-contenedor">
+      <div class="contenido">
+        <div class="titulo-boton-pildora">
+          <h1>Ingredientes</h1>
+          <button class="boton-pildora">Nuevo Ingrediente</button>
+        </div>
+  
+        <div>
+          <div class="grid-contenedor contenedor">
+            <div class="header">Nombre</div>
+            <div class="header">Costo</div>
+            <div class="header ocultar-mobile">Grupo Alimenticio</div>
+            <div class="centrado header ocultar-mobile">Origen</div>
+            <div class="centrado header">Acciones</div>
+    
+            <div class="fuente-oscuro">Tomate</div>
+            <div>$0.50</div>
+            <div class="ocultar-mobile">Frutas y verduras</div>
+            <div class="centrado ocultar-mobile">
+              <div class="icon">
+                <img src="../assets/icons/palta.svg" alt="" />
+              </div>
+            </div>
+            <div class="centrado">
+              <div class="icon mostrar-mobile">
+                <img src="../assets/icons/ojo.svg" alt="Ver" />
+              </div>
+              <span class="mostrar-mobile">|</span>
+              <div class="icon">
+                <img src="../assets/icons/editar.svg" alt="Editar" />
+              </div>
+              |
+              <div class="icon">
+                <img src="../assets/icons/eliminar.svg" alt="Eliminar" />
+              </div>
+            </div>
+
+            <div class="fuente-oscuro">Pechuga de pollo</div>
+            <div>$3.00</div>
+            <div class="ocultar-mobile">Proteinas</div>
+            <div class="centrado ocultar-mobile">
+              <div class="icon">
+                <img src="../assets/icons/proteina.svg" alt="" />
+              </div>
+            </div>
+            <div class="centrado">
+              <div class="icon mostrar-mobile">
+                <img src="../assets/icons/ojo.svg" alt="Ver" />
+              </div>
+              <span class="mostrar-mobile">|</span>
+              <div class="icon">
+                <img src="../assets/icons/editar.svg" alt="Editar" />
+              </div>
+              |
+              <div class="icon">
+                <img src="../assets/icons/eliminar.svg" alt="Eliminar" />
+              </div>
+            </div>
+
+            <div class="fuente-oscuro">Arroz</div>
+            <div>$1.00</div>
+            <div class="ocultar-mobile">Cereales y tuberculos</div>
+            <div class="centrado ocultar-mobile">
+              <div class="icon">
+                <img src="../assets/icons/palta.svg" alt="" />
+              </div>
+            </div>
+            <div class="centrado">
+              <div class="icon mostrar-mobile">
+                <img src="../assets/icons/ojo.svg" alt="Ver" />
+              </div>
+              <span class="mostrar-mobile">|</span>
+              <div class="icon">
+                <img src="../assets/icons/editar.svg" alt="Editar" />
+              </div>
+              |
+              <div class="icon">
+                <img src="../assets/icons/eliminar.svg" alt="Eliminar" />
+              </div>
+            </div>
+
+            <div class="fuente-oscuro">Leche</div>
+            <div>$2.00</div>
+            <div class="ocultar-mobile">Lacteos</div>
+            <div class="centrado ocultar-mobile">
+              <div class="icon">
+                <img src="../assets/icons/proteina.svg" alt="" />
+              </div>
+            </div>
+            <div class="centrado">
+              <div class="icon mostrar-mobile">
+                <img src="../assets/icons/ojo.svg" alt="Ver" />
+              </div>
+              <span class="mostrar-mobile">|</span>
+              <div class="icon">
+                <img src="../assets/icons/editar.svg" alt="Editar" />
+              </div>
+              |
+              <div class="icon">
+                <img src="../assets/icons/eliminar.svg" alt="Eliminar" />
+              </div>
+            </div>
+
+            <div class="fuente-oscuro">Palta</div>
+            <div>$1.50</div>
+            <div class="ocultar-mobile">Frutas y verduras</div>
+            <div class="centrado ocultar-mobile">
+              <div class="icon">
+                <img src="../assets/icons/palta.svg" alt="" />
+              </div>
+            </div>
+            <div class="centrado">
+              <div class="icon mostrar-mobile">
+                <img src="../assets/icons/ojo.svg" alt="Ver" />
+              </div>
+              <span class="mostrar-mobile">|</span>
+              <div class="icon">
+                <img src="../assets/icons/editar.svg" alt="Editar" />
+              </div>
+              |
+              <div class="icon">
+                <img src="../assets/icons/eliminar.svg" alt="Eliminar" />
+              </div>
+            </div>
+
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </body>
+</html>

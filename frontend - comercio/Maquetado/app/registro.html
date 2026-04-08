@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+
+    <!-- Fuente Work Sans -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/globales/styles.css" />
+    <link rel="stylesheet" href="./styles/globales/botones.css"/>
+    <link rel="stylesheet" href="./styles/globales/input.css">
+    <link rel="stylesheet" href="./styles/login-register.css"/>
+</head>
+
+<body>
+  <form class="contenedor">
+      <header class="titulo-login">
+        <div class="circulo-rojo">
+          <img class="icono" src="../assets/icons/olla.svg"/>
+        </div>
+        <h2>Crea tu cuenta</h2>
+      </header>
+
+      <section class="contenedor-input">
+        <fieldset>
+          <label for="usuario">Usuario*</label>
+          <input id="usuario" placeholder="Escribir"/>
+        </fieldset>
+
+        <fieldset>
+          <label for="contraseña">Password*</label>
+          <div class="input-password">
+            <input type="password" id="contraseña" placeholder="●●●●●●●"/>
+            <img class="icono ojo" src="../assets/icons/ojo.svg"/>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <label for="segunda-contraseña">Re-ingrese el Password*</label>
+          <div class="input-password">
+            <input type="password" id="segunda-contraseña" class="reingreso" placeholder="●●●●●●●">
+            <img class="icono ojo" src="../assets/icons/ojo.svg"/>
+          </div>
+          <div class="mensaje-alerta">
+            <img class="icono alerta" src="src/lib/assets/icons/alerta.svg">
+            <div>Las contraseñas no coinciden</div>
+          </div>
+        </fieldset>
+      </section>
+
+      <div class="contenedor-botones">
+        <button type="submit" class="boton-primario">Registrarse</button>
+        <div class="registrate">¿Ya tienes una cuenta? <a href="">Inicia sesión</a></div>
+      </div>
+    </form> 
+</body>
+</html>

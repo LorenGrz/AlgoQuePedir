@@ -1,0 +1,117 @@
+
+.contenedor-editar-plato {
+  max-width: var(--ancho-contenedor);
+  width: 90%;
+  margin: var(--margen-contenedor);
+}
+
+.editar-plato-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--margen-contenedor);
+  margin-top: var(--margen-contenedor);
+}
+
+/* ------ seccion 1 ------ */
+.editar-plato-form .img-contenedor {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+}
+.img-contenedor img {
+  object-fit: cover;
+}
+
+.inputs-contenedor {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+}
+.textarea-contenedor {
+  flex-grow: 2;
+  flex-shrink: 5;
+}
+
+/* ------ seccion 2 COSTOS ------ */
+.switch-label label {
+  font-weight: 600;
+}
+.warning {
+  color: var(--color-warning);
+  display: flex;
+}
+.warning img {
+  height: 1.1rem;
+  width: 1.1rem;
+  margin-right: 1rem;
+}
+
+/* ------ seccion 3 INGREDIENTE ------ */
+.precio {
+  font-weight: 600;
+  color: var(--color-fuente-fuerte);
+}
+.contenedor-boton {
+  padding-top: 0;
+}
+.editar-plato-form .contenedor-tabla-datos {
+  grid-template-columns: 2fr 3fr 1fr 1fr;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0,0.6);
+  z-index: 1000;
+}
+.popup {
+  max-width: 80%;
+  max-height: 90%;
+  background-color: #FFF;
+  padding: 2rem;
+  overflow-y: auto;
+  position: relative;
+}
+.popup p {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  padding-right: 3rem;
+}
+.ingrediente {
+  padding: 1rem;
+  width: 100%;
+  cursor: pointer;
+}
+.ingrediente:hover {
+  background-color: var(--color-background);
+}
+.salir-icon {
+  position: absolute;
+  right: 2rem;
+  cursor: pointer;
+}
+.agreegar-ing {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.popup button,
+.editar-plato-form button {
+  background: none;
+  border: none;
+  display: block;
+}
+
+/* ------ MEDIA ------ */
+@media (max-width: 640px) {
+  /* ------ seccion 2 COSTOS ------ */
+  .switch-label p {
+    display: none;
+  }
+}

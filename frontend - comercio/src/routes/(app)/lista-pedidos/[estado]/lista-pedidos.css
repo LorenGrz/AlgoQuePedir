@@ -1,0 +1,69 @@
+.contenedor-pedidos {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.navegacion-pedidos {
+  padding-left: 1rem;
+  max-width: var(--ancho-contenedor);
+  width: 100%;
+}
+.navegacion-pedidos h1 {
+  padding-left: 1rem;
+}
+
+.tabs-pedidos {
+  display: flex;
+  border-bottom: 0.01rem solid var(--color-secundario); /* Línea invisible para evitar salto */
+  margin-top: var(--margen-contenedor);
+  padding-left: 1rem;
+}
+
+.tabs-pedidos button {
+  background: none;
+  border: none;
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  color: var(--color-secundario); /* Gris para inactivos */
+  border-bottom: 0.01rem solid var(--color-secundario); /* Línea invisible para evitar salto */
+  cursor: pointer;
+  margin: 0 0.5rem;
+}
+
+.tabs-pedidos button:hover {
+  color: var(--color-fuente-fuerte); /* Resalta al pasar el mouse */
+  border-bottom: 0.1rem solid var(--color-fuente-fuerte); /* Línea visible para activo */
+}
+
+.tabs-pedidos button.active {
+  color: var(--color-fuente-fuerte); /* Texto activo */
+  border-bottom: 0.1rem solid var(--color-fuente-fuerte); /* Línea visible para activo */
+  font-weight: 700;
+}
+/* Grid de pedidos */
+.ordenes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  justify-items: center;
+  width: 90%;
+  max-width: var(--ancho-contenedor);
+}
+
+@media (max-width: 1024px) {
+  .ordenes-container {
+    gap: 0.8rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+  }
+}
+@media (max-width: 640px) {
+  .ordenes-container {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}

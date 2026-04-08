@@ -1,0 +1,84 @@
+.contenedor-editar-plato {
+  max-width: var(--ancho-contenedor);
+  width: 90%;
+  margin: var(--margen-contenedor);
+}
+
+.boton-primario {
+  margin-right: 1rem
+}
+
+.contenedor {
+  margin-top: var(--margen-contenedor);
+}
+
+h2 {
+  margin-bottom: var(--margen-entre-inputs);
+}
+input, textarea {
+  margin-top: var(--margen-input-label);
+}
+
+/* ------ seccion 1 ------ */
+.contenedor-editar-plato .img-contenedor {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  gap: var(--margen-entre-inputs);
+}
+.img-contenedor img{
+  object-fit: cover;
+}
+
+.inputs-contenedor {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--margen-entre-inputs);
+}
+.textarea-contenedor {
+  flex-grow: 2;
+  flex-shrink: 5;
+}
+textarea {
+  resize: none;
+  height: calc(100% - 1rem);
+  min-height: calc(var(--input-height) * 3);
+}
+
+/* ------ seccion 2 COSTOS ------ */
+.input-contenedor {
+  width: 100%;
+}
+.switch-contenedor {
+  margin-top: var(--margen-entre-inputs);
+  width: 100%;
+}
+.switch-contenedor label {
+  font-weight: 600;
+}
+
+/* ------ seccion 3 INGREDIENTE ------ */
+.precio {
+  font-weight: 600;
+  color: var(--color-fuente-fuerte);
+}
+
+/* ------ MEDIA ------ */
+@media (max-width: 640px) {
+  /* ------ seccion 2 COSTOS ------ */
+  .switch-contenedor p {
+    display: none;
+  }
+  .switch-contenedor {
+    margin-bottom: 1rem;
+  }
+
+  /* ------ seccion 3 INGREDIENTE ------ */
+  .contenedor-boton button {
+    flex-grow: 1;
+    margin-right: 0px
+  }
+}

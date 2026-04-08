@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+
+    <!-- Fuente Work Sans -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/globales/styles.css" />
+    <link rel="stylesheet" href="./styles/globales/botones.css"/>
+    <link rel="stylesheet" href="./styles/globales/input.css">
+    <link rel="stylesheet" href="./styles/login-register.css" />
+  </head>
+  
+  <body>
+    <form class="contenedor">
+      <div class="titulo-login">
+        <div class="circulo-rojo">
+          <img class="icono" src="../assets/icons/olla.svg"/>
+        </div>
+        <h2>Algo que pedir</h2>
+      </div>
+
+      <section class="contenedor-input">
+        <fieldset>
+          <label for="usuario-login">Usuario*</label>
+          <input id="usuario-login" placeholder="Escribir"/>
+        </fieldset>
+
+        <fieldset>
+          <label for="contraseña">Password*</label>
+          <div class="input-password">
+            <input type="password" id="contraseña" placeholder="●●●●●●●"/>
+            <img class="icono ojo" src="../assets/icons/ojo.svg"/>
+          </div>
+        </fieldset>
+      </section>
+
+      <div class="contenedor-botones">
+        <button type="submit" class="boton-primario">Iniciar sesión</button>
+        <div class="registrate">¿No tienes una cuenta? <a href="">Regístrate</a></div>
+      </div>
+
+    </form> 
+  </body>
+</html>
