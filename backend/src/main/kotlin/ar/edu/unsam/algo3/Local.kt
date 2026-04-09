@@ -29,7 +29,7 @@ class Local(
     override var id: Int? = null, val nombre: String, var direccion: Direccion
 ) : EntidadConId {
     /* Al registrar un local completo credenciales y se le da un ID (.create()) */
-    lateinit var credencial: Credencial
+    lateinit var usuario: Usuario
     var imgurl: String = ""
     /* Las propiedades privadas son ignoradas por Jackson */
     private val puntuacionCertificada: Int = 4

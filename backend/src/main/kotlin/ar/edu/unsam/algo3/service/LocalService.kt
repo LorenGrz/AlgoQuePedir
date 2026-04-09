@@ -16,7 +16,7 @@ class LocalService(
 
     fun actualizarLocal(local: Local) {
         val localViejo = localRepository.getById(local.id!!)
-        local.credencial = localViejo.credencial
+        local.usuario = localViejo.usuario
         localRepository.update(local)
     }
 

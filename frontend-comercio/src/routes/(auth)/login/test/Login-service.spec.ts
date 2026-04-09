@@ -13,7 +13,7 @@ describe('authService', () => {
     vi.clearAllMocks()
   })
 
-  it('debe llamar al back en /auth/login y devolver el localId', async () => {
+  it('debe llamar al back en /auth/local/login y devolver el localId', async () => {
     mockedAxios.post = vi.fn().mockResolvedValue({
       data: {
         id: 1
@@ -28,14 +28,14 @@ describe('authService', () => {
     const response = await authService.login(usuarioRequest)
 
     expect(mockedAxios.post).toHaveBeenCalledWith(
-      `${API_URL}/auth/login`,
+      `${API_URL}/auth/local/login`,
       usuarioRequest
     )
 
     expect(response.id).toBe(1)
   })
 
-  it('debe llamar al back en /auth/register y devolver el localId', async () => {
+  it('debe llamar al back en /auth/local/register y devolver el localId', async () => {
     mockedAxios.post = vi.fn().mockResolvedValue({
       data: {
         id: 2
@@ -50,7 +50,7 @@ describe('authService', () => {
     const response = await authService.register(usuarioRequest)
 
     expect(mockedAxios.post).toHaveBeenCalledWith(
-      `${API_URL}/auth/register`,
+      `${API_URL}/auth/local/register`,
       usuarioRequest
     )
     expect(response.id).toBe(2)

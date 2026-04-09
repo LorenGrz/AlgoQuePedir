@@ -12,7 +12,7 @@ export interface UsuarioResponse {
 class AuthService {
   async login(usuario: UsuarioRequest): Promise<UsuarioResponse> {
     const { data } = await axios.post<UsuarioResponse>(   // hago un post esperando UsuarioResponse como output
-      `${API_URL}/auth/login`,                            // url
+      `${API_URL}/auth/local/login`,                            // url
       usuario                                             // parámetro
     )
     return data
@@ -20,7 +20,7 @@ class AuthService {
 
   async register(usuario: UsuarioRequest): Promise<UsuarioResponse> {
     const { data } = await axios.post<UsuarioResponse>(
-      `${API_URL}/auth/register`,
+      `${API_URL}/auth/local/register`,
       usuario
     )
     return data

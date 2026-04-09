@@ -19,7 +19,7 @@ class LocalSearchStrategy : SearchStrategy<Local> {
     override fun matches(obj: Local, value: String): Boolean {
         return obj.nombre.contains(value, ignoreCase = true) ||
                 obj.direccion.calle.equals(value, ignoreCase = true) ||
-                obj.credencial.username.equals(value, ignoreCase = false)  // esto o obj.credencil.username == value (coincidencia exacta)
+                obj.usuario.username.equals(value, ignoreCase = false)  // esto o obj.credencil.username == value (coincidencia exacta)
     }
 }
 

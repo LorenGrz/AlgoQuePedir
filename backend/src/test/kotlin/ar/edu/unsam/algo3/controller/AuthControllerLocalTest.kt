@@ -49,7 +49,7 @@ class AuthControllerLocalTest(
             nombre = "La Esquina",
             direccion = Direccion("San Martín", 1234, Point(-34.6, -58.4))
         ).apply {
-            credencial = Credencial("pedroLocal", "123")
+            usuario = ar.edu.unsam.algo3.Usuario("", "", "pedroLocal", Direccion("", 0, Point(0.0, 0.0)), imgUrl = "").apply { password = "123" }
         }
 
         val retorno = RetornoLocalDTO(id = 5)
@@ -127,7 +127,7 @@ class AuthControllerLocalTest(
             nombre = "",
             direccion = Direccion("", 0, Point(0.0, 0.0))
         ).apply {
-            credencial = Credencial("nuevoLocal", "123")
+            usuario = ar.edu.unsam.algo3.Usuario("", "", "nuevoLocal", Direccion("", 0, Point(0.0, 0.0)), imgUrl = "").apply { password = "123" }
         }
 
         val localRegistrado = Local(
@@ -135,7 +135,7 @@ class AuthControllerLocalTest(
             nombre = "",
             direccion = Direccion("", 0, Point(0.0, 0.0))
         ).apply {
-            credencial = Credencial("nuevoLocal", "123")
+            usuario = ar.edu.unsam.algo3.Usuario("", "", "nuevoLocal", Direccion("", 0, Point(0.0, 0.0)), imgUrl = "").apply { password = "123" }
         }
 
         val localIdDTO = RetornoLocalDTO(id = 10)

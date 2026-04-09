@@ -29,10 +29,10 @@ class AuthService(
     }
 
     fun loginLocal(credencial: LoginLocalDTO): Local {
-        val usuario = localRepository.search(credencial.username).firstOrNull()
-        if ( usuario == null ) { throw NotFoundException("Usuario no registrado.") }
-        if ( usuario.credencial.password != credencial.password ) { throw UnauthorizedException("Usuario o contraseña incorrecto.") }
-        return usuario
+        val local = localRepository.search(credencial.username).firstOrNull()
+        if ( local == null ) { throw NotFoundException("Usuario no registrado.") }
+        if ( local.usuario.password != credencial.password ) { throw UnauthorizedException("Usuario o contraseña incorrecto.") }
+        return local
     }
 
     fun registrarUsuario(credencial: LoginUsuarioDTO) : Usuario {

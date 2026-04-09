@@ -46,7 +46,7 @@ class LocalDataLoader(private val localRepository: LocalRepository) : CommandLin
             agregarMetodoDePago(MetodosDePago.EFECTIVO)
             agregarMetodoDePago(MetodosDePago.TRANSFERENCIA)
             imgurl = "https://aprende.com/wp-content/uploads/2022/06/distribucion-mesas.jpg"
-            credencial = Credencial("localJuan", "123")
+            usuario = Usuario("Juan", "Perez", "localJuan", Direccion("Av. Córdoba", 2445, Point(-34.599220725558055, -58.40170853602751)), imgUrl = "").apply { password = "123" }
             agregarResena(resena1)
             agregarResena(resena2)
             agregarResena(resena3)
@@ -61,7 +61,7 @@ class LocalDataLoader(private val localRepository: LocalRepository) : CommandLin
                 agregarMetodoDePago(MetodosDePago.QR)
                 agregarMetodoDePago(MetodosDePago.TARJETA)
                 imgurl = "https://www.clarin.com/img/2018/05/11/HypqZE7CG_1200x0__1.jpg"
-                credencial = Credencial("localMateo", "123")
+                usuario = Usuario("Mateo", "Gomez", "localMateo", Direccion("Av. Corrientes", 1780, Point(-34.603531, -58.382091)), imgUrl = "").apply { password = "123" }
                 agregarResena(resena1)
                 agregarResena(resena2)
                 agregarResena(resena3)
@@ -75,7 +75,7 @@ class LocalDataLoader(private val localRepository: LocalRepository) : CommandLin
             ).apply {
                 agregarMetodoDePago(MetodosDePago.EFECTIVO)
                 imgurl = "https://media-cdn.tripadvisor.com/media/photo-m/1280/28/1f/2f/c2/dante-bar-michelangelo.jpg"
-                credencial = Credencial("localTokio", "123")
+                usuario = Usuario("Tokio", "Owner", "localTokio", Direccion("Calle Humboldt", 1550, Point(-34.583911, -58.436517)), imgUrl = "").apply { password = "123" }
                 agregarResena(resena1)
                 agregarResena(resena2)
                 agregarResena(resena3)
@@ -90,7 +90,7 @@ class LocalDataLoader(private val localRepository: LocalRepository) : CommandLin
             ).apply {
                 agregarMetodoDePago(MetodosDePago.TARJETA)
                 imgurl = "https://www.clarin.com/img/2018/05/11/B1ImGVQAz_720x0__1.jpg"
-                credencial = Credencial("localCafe", "123")
+                usuario = Usuario("Cafe", "Owner", "localCafe", Direccion("Gral. Paz", 3100, Point(-34.580230, -58.425812)), imgUrl = "").apply { password = "123" }
                 agregarResena(resena1)
                 agregarResena(resena1)
             }

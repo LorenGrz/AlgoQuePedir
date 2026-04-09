@@ -74,10 +74,15 @@ class LocalMapper: LocalAdapter {
     }
 
     override fun newLocalFromRegister(registerDTO: LoginLocalDTO): Local {
-        val credencial = Credencial(
+        val nuevoUsuario = ar.edu.unsam.algo3.Usuario(
+            nombre = "",
+            apellido = "",
             username = registerDTO.username,
+            direccion = Direccion("", 0, Point(0.0, 0.0)),
+            imgUrl = ""
+        ).apply {
             password = registerDTO.password
-        )
+        }
 
         val local = Local(
             id = null,      // se lo doy cuando llame a mapper.create()
@@ -85,7 +90,7 @@ class LocalMapper: LocalAdapter {
             direccion = Direccion("", 0, Point(0.0, 0.0))
         )
 
-        local.credencial = credencial
+        local.usuario = nuevoUsuario
         local.imgurl = ""
         local.regaliasPorAutor = 0.0
         local.setPorcentajeComision(0.10)
