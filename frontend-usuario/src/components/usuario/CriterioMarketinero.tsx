@@ -35,9 +35,9 @@ export const CriterioMarketinero = ({criterio, errors, setErrors}: Props) => {
   return (
     <div className="my-2">
       {palabras.map((palabra) => (
-        <div key={`mkt-${palabra}`} className="cursor-pointer flex w-full justify-between py-2 text-gray-500">
+        <div key={`mkt-${palabra}`} className="flex w-full justify-between py-2 text-gray-900 dark:text-gray-100">
           {palabra}
-          <img src={xIcon} alt="Eliminar" onClick={() => {eliminarPalabra(palabra)}}/>
+          <img src={xIcon} alt="Eliminar" onClick={() => {eliminarPalabra(palabra)}} className="dark:invert w-5 opacity-60 hover:opacity-100 cursor-pointer"/>
         </div>
       ))}
 
@@ -51,7 +51,7 @@ export const CriterioMarketinero = ({criterio, errors, setErrors}: Props) => {
         />
         <button onClick={() => agregarPalabra()}
           type="button"
-          className="inline-flex items-center gap-2 rounded-xl border px-3 py-2 text-sm bg-red-600 text-white hover:bg-red-700"
+          className="inline-flex items-center gap-2 rounded-xl border border-transparent px-3 py-2 text-sm bg-rose-600 text-white hover:bg-rose-700 transition-colors cursor-pointer"
         >
           +
         </button>

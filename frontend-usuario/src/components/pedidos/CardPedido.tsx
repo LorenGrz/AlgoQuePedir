@@ -16,12 +16,12 @@ interface CardPedidoProps {
 export const CardPedido = ({ pedido, estadoActivo, onCancelSuccess }: CardPedidoProps) => {
   const [isCanceling, setIsCanceling] = useState(false)
   const [error, setError] = useState<ErrorCustom | null>(null)
+
   const handleCancelarClick = async (e: React.MouseEvent) => {
     e.stopPropagation()
     e.preventDefault()
     setIsCanceling(true)
     setError(null)
-
     try {
       await pedidoService.cancelarPedido(pedido.id!)
       onCancelSuccess(pedido.id!)
@@ -32,44 +32,44 @@ export const CardPedido = ({ pedido, estadoActivo, onCancelSuccess }: CardPedido
       setIsCanceling(false)
     }
   }
+
   return (
     <Link
       to={`/detalle-pedidos/${pedido.id}`}
-      className="group flex items-center bg-white rounded-2xl shadow-sm p-3 cursor-pointer transition-transform transform hover:scale-105 hover:shadow-md hover:bg-gray-50"
+      className="group flex items-center gap-3 bg-white dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 p-3 cursor-pointer transition-all duration-200 hover:shadow-md hover:border-gray-200 dark:hover:border-gray-600"
     >
       <img
         src={pedido.local?.img}
         alt={pedido.local?.nombre}
-        className="w-16 h-16 rounded-xl object-cover mr-3"
+        className="w-14 h-14 rounded-lg object-cover flex-shrink-0"
       />
-      <div className="flex-1">
-        <h3 className="font-semibold text-gray-800 group-hover:text-black">
+      <div className="flex-1 min-w-0">
+        <h3 className="font-semibold text-sm text-gray-900 dark:text-gray-100 truncate">
           {pedido.local?.nombre}
         </h3>
-        <p className="text-gray-700 text-sm">Total: ${pedido.total?.toFixed(2)}</p>
-        <p className="text-gray-500 text-xs">
-          {formatIsoDateToDayAndMonth(pedido.fecha)} • {pedido.cantArticulos} artículos
+        <p className="text-gray-600 dark:text-gray-300 text-sm mt-0.5">
+          ${pedido.total?.toFixed(2)}
+        </p>
+        <p className="text-gray-400 dark:text-gray-500 text-xs mt-0.5">
+          {formatIsoDateToDayAndMonth(pedido.fecha)} · {pedido.cantArticulos} artículo{pedido.cantArticulos !== 1 ? 's' : ''}
         </p>
       </div>
 
-      {/* Botón de cancelar */}
       {estadoActivo !== 'cancelado' && (
-        <div onClick={(e) => e.preventDefault()}>
-          <div>
-            {isCanceling ? (
-              <div className="text-gray-500 px-4">Cancelando...</div>
-            ) : (
-              <Boton
-                tipo="custom"
-                onClick={handleCancelarClick}
-                className="py-3 px-4 bg-red-600 text-white hover:bg-red-700 rounded-b-full rounded-t-full cursor-pointer"
-                disabled={isCanceling}
-              >
-                Cancelar
-              </Boton>
-            )}
-            {error && <p>{<ErrorIcon />}</p>}
-          </div>
+        <div onClick={(e) => e.preventDefault()} className="flex-shrink-0">
+          {isCanceling ? (
+            <span className="text-xs text-gray-400 px-3">Cancelando…</span>
+          ) : (
+            <Boton
+              tipo="custom"
+              onClick={handleCancelarClick}
+              className="py-2 px-4 text-sm bg-rose-600 text-white hover:bg-rose-700 rounded-full cursor-pointer transition-colors font-medium"
+              disabled={isCanceling}
+            >
+              Cancelar
+            </Boton>
+          )}
+          {error && <p><ErrorIcon /></p>}
         </div>
       )}
     </Link>

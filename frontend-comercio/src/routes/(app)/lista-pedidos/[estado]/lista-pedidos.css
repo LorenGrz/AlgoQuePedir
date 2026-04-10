@@ -3,67 +3,69 @@
   width: 100%;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
+
 .navegacion-pedidos {
-  padding-left: 1rem;
+  padding: 0 1.5rem;
   max-width: var(--ancho-contenedor);
   width: 100%;
-}
-.navegacion-pedidos h1 {
-  padding-left: 1rem;
 }
 
 .tabs-pedidos {
   display: flex;
-  border-bottom: 0.01rem solid var(--color-secundario); /* Línea invisible para evitar salto */
-  margin-top: var(--margen-contenedor);
-  padding-left: 1rem;
+  border-bottom: 1px solid var(--color-borde-suave);
+  margin-top: 1.5rem;
+  gap: 0.25rem;
 }
 
 .tabs-pedidos button {
   background: none;
   border: none;
-  padding: 0.5rem 0;
-  font-size: 1rem;
-  color: var(--color-secundario); /* Gris para inactivos */
-  border-bottom: 0.01rem solid var(--color-secundario); /* Línea invisible para evitar salto */
+  padding: 0.625rem 1rem;
+  font-size: 0.9rem;
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: var(--color-fuente-medio);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
   cursor: pointer;
-  margin: 0 0.5rem;
+  transition: color 0.2s, border-color 0.2s;
+  border-radius: 0.25rem 0.25rem 0 0;
 }
 
 .tabs-pedidos button:hover {
-  color: var(--color-fuente-fuerte); /* Resalta al pasar el mouse */
-  border-bottom: 0.1rem solid var(--color-fuente-fuerte); /* Línea visible para activo */
+  color: var(--color-fuente-fuerte);
 }
 
 .tabs-pedidos button.active {
-  color: var(--color-fuente-fuerte); /* Texto activo */
-  border-bottom: 0.1rem solid var(--color-fuente-fuerte); /* Línea visible para activo */
-  font-weight: 700;
+  color: var(--color-primario);
+  border-bottom-color: var(--color-primario);
+  font-weight: 600;
 }
+
 /* Grid de pedidos */
 .ordenes-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 1rem;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-  justify-items: center;
-  width: 90%;
+  margin: 1.5rem 0;
+  justify-items: stretch;
+  width: 100%;
   max-width: var(--ancho-contenedor);
+  padding: 0 1.5rem;
 }
 
 @media (max-width: 1024px) {
   .ordenes-container {
-    gap: 0.8rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    margin-bottom: 0.5rem;
+    gap: 0.75rem;
+    padding: 0 1rem;
+    margin: 1rem 0;
   }
 }
+
 @media (max-width: 640px) {
   .ordenes-container {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
   }
 }

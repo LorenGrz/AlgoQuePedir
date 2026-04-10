@@ -32,8 +32,8 @@ export const LocalCard = ({ id, nombre, direccion, altura, imagen, esCercano }: 
       </div>
 
       <div className="mt-1">
-        <h3 className="text-sm font-medium text-gray-800" data-testid="nombre-local">{nombre}</h3>
-        <p className="text-xs text-rose-400">{direccion}, {altura}</p>
+        <h3 className="text-sm font-medium text-gray-800 dark:text-gray-100 transition-colors duration-300" data-testid="nombre-local">{nombre}</h3>
+        <p className="text-xs text-rose-400 dark:text-rose-300 transition-colors duration-300">{direccion}, {altura}</p>
       </div>
     </Link>
   )

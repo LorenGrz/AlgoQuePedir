@@ -65,7 +65,7 @@ export const CriteriosPanel = () => {
 
   // -------- HTML --------
   return (
-    <div className='h-[calc(100dvh-5rem)] flex flex-col '>
+    <div className='h-[calc(100dvh-5rem)] flex flex-col bg-white dark:bg-gray-800 transition-colors duration-300'>
       <Header label="Selecciona tu criterio" icon={volverIcon}></Header>
       <div className='flex-1 overflow-hidden'> 
         <section className="h-full overflow-y-auto px-6 py-4">

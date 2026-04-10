@@ -11,15 +11,15 @@ type TabsProps = {
 
 export const Tabs = ({ tabs, onChange, active }: TabsProps) => {
   return (
-    <div className="flex mt-6 border-b border-gray-200">
+    <div className="flex border-b border-gray-100 dark:border-gray-700 transition-colors duration-300 px-4">
       {tabs.map((tab) => (
         <button
           key={tab.id}
           onClick={() => onChange(tab.id)}
-          className={`flex-1 pb-2 text-center font-medium transition-colors cursor-pointer ${
+          className={`flex-1 py-3 text-sm text-center font-medium transition-all cursor-pointer border-b-2 -mb-px ${
             active === tab.id
-              ? 'text-red-600 border-b-2 border-red-600'
-              : 'text-gray-400 hover:text-gray-700'
+              ? 'text-rose-700 dark:text-rose-400 border-rose-700 dark:border-rose-400'
+              : 'text-gray-400 dark:text-gray-500 border-transparent hover:text-gray-600 dark:hover:text-gray-300'
           }`}
         >
           {tab.label}

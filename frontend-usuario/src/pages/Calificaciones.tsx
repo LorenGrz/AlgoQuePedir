@@ -39,7 +39,7 @@ export const Calificaciones = () => {
     }
 
   return (
-    <section className="flex flex-col bg-white font-sans w-full min-h-screen">
+    <section className="flex flex-col bg-white dark:bg-gray-800 font-sans w-full min-h-screen transition-colors duration-300">
       <Header label="Restaurantes a calificar" />
       <div className="flex flex-col">
         {error && (

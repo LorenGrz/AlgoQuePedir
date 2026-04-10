@@ -35,7 +35,7 @@ export const CriterioLocales = ({criterio}: Props) => {
       <div className="flex justify-end">
         <button onClick={() => {setShowLocalesModal(true)}}
             type="button"
-            className="inline-flex items-center gap-2 rounded-xl border px-3 py-2 text-sm bg-red-600 text-white hover:bg-red-700"
+            className="inline-flex items-center gap-2 rounded-xl border border-transparent px-3 py-2 text-sm bg-rose-600 text-white hover:bg-rose-700 transition-colors cursor-pointer"
         >
             +
         </button>

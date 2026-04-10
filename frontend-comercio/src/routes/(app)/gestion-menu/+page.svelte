@@ -34,6 +34,10 @@
   }
   .contenedor-gestion-menu a {
     text-decoration: none;
-    color: black;
+    color: var(--color-fuente-fuerte);
+    transition: opacity 0.15s;
+  }
+  .contenedor-gestion-menu a:hover {
+    opacity: 0.85;
   }
 </style>

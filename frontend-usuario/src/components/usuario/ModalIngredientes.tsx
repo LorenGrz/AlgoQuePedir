@@ -34,17 +34,17 @@ export const ModalIngredientes = ({ seleccionar, onClose, usuario, isPreferidos 
       onClick={onClose}
     >
       <div
-        className="bg-white w-full sm:max-w-md max-h-[90dvh] overflow-y-auto rounded-t-2xl sm:rounded-2xl shadow-lg p-4 animate-slide-up"
+        className="bg-white dark:bg-gray-800 w-full sm:max-w-md max-h-[90dvh] overflow-y-auto rounded-t-2xl sm:rounded-2xl shadow-lg p-4 animate-slide-up transition-colors duration-300"
         onClick={(e) => e.stopPropagation()}
       >
-        <p className="text-sm text-gray-500 py-3">
+        <p className="text-sm text-gray-500 dark:text-gray-400 py-3">
           Clickee los ingredientes que quiera agregar a la lista
         </p>
         {ingredientes.map((ing) => (
           <div
             onClick={() => seleccionar(ing)}
             key={`all-ing-${ing.id}-${ing.nombre}`}
-            className="flex justify-center p-2 hover:bg-gray-100"
+            className="flex justify-center p-2 cursor-pointer text-gray-900 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 rounded transition-colors"
           >
             {ing.nombre}
           </div>

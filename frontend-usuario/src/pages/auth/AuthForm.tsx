@@ -48,8 +48,8 @@ const AUTH_CONFIGS: Record<'login' | 'register', AuthConfig> = {
 }
 
 export function AuthForm() {
-  const inputClasses = 'border-2 border-gray-300 rounded-lg p-2 pr-10 w-full focus:border-red-600 focus:ring-0 focus:outline-none w-full'
-  const inputErrorClasses = 'border-2 border-red-500 rounded-lg p-2 pr-10 w-full focus:border-red-600 focus:ring-0 focus:outline-none w-full'
+  const inputClasses = 'border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 rounded-lg p-2.5 pr-10 w-full text-sm focus:border-rose-600 focus:ring-1 focus:ring-rose-600/20 focus:outline-none transition-colors placeholder:text-gray-400 dark:placeholder:text-gray-500'
+  const inputErrorClasses = 'border border-rose-400 dark:border-rose-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 rounded-lg p-2.5 pr-10 w-full text-sm focus:border-rose-600 focus:ring-1 focus:ring-rose-600/20 focus:outline-none transition-colors placeholder:text-gray-400 dark:placeholder:text-gray-500'
  
   const { mode = 'login' } = useParams<{ mode: 'login' | 'register' }>()
   const navigate = useNavigate()
@@ -122,103 +122,107 @@ export function AuthForm() {
   }
 
   return (
-    <section className="p-4">
-      <div className="flex flex-row items-center justify-center mb-6 gap-4">
-        <div className="w-16 h-16 flex items-center justify-center rounded-full bg-red-600 flex-shrink-0">
-          <img src={logo} alt="Logo" className="w-10 h-10 object-contain" />
-        </div>
-        <h2 className="text-2xl font-bold tracking-tight text-gray-900">{modo.titulo}</h2>
-      </div>
-
-      <form  className="flex flex-col">
-        <fieldset className="mb-6 flex flex-col p-4">
-          <label htmlFor="username">Usuario*</label>
-          <input
-            className={formValues.errors.username ? inputErrorClasses : inputClasses}
-            type="text"
-            id="username"
-            name="username"
-            placeholder="Escribir"
-            value={formValues.username}
-            onChange={handleChange}
-            required
-          />
-          {formValues.errors.username && (
-            <p className="text-red-500 text-sm mt-1">{formValues.errors.username}</p>
-          )}
-        </fieldset>
-
-        <fieldset className="mb-6 flex flex-col p-4">
-          <label htmlFor="password">Password*</label>
-          <div className="relative w-full">
-            <input
-              className={formValues.errors.password ? inputErrorClasses : inputClasses}
-              type={mostrarContrasena ? 'text' : 'password'}
-              id="password"
-              name="password"
-              placeholder="●●●●●●●"
-              value={formValues.password}
-              onChange={handleChange}
-              required
-            />
-            <button
-              type="button"
-              onClick={() => setMostrarContrasena(!mostrarContrasena)}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 focus:outline-none transition-opacity cursor-pointer"
-            >
-              <img
-                src={ojoIcon}
-                alt={mostrarContrasena ? 'Ocultar' : 'Mostrar'}
-                className={`w-5 h-5 ${mostrarContrasena ? 'opacity-100' : 'opacity-60'}`}
-              />
-            </button>
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900 transition-colors duration-300 px-4">
+      <div className="w-full max-w-sm bg-white dark:bg-gray-800 rounded-2xl shadow-md border border-gray-100 dark:border-gray-700 overflow-hidden transition-colors duration-300">
+        <section className="p-8">
+          <div className="flex flex-col items-center mb-8 gap-3">
+            <div className="w-16 h-16 flex items-center justify-center rounded-full bg-rose-600 shadow-md">
+              <img src={logo} alt="Logo" className="w-9 h-9 object-contain" />
+            </div>
+            <h2 className="text-xl font-bold tracking-tight text-gray-900 dark:text-gray-100">{modo.titulo}</h2>
           </div>
-          {formValues.errors.password && (
-            <p className="text-red-500 text-sm mt-1">{formValues.errors.password}</p>
-          )}
-        </fieldset>
 
-        {modo.mostrarConfirmarContrasena && (
-          <fieldset className="mb-6 flex flex-col p-4">
-            <label htmlFor="confirmPassword">Re-ingrese el Password*</label>
-            <div className="relative w-full">
+          <form className="flex flex-col gap-1">
+            <fieldset className="flex flex-col gap-1.5">
+              <label htmlFor="username" className="text-sm font-medium text-gray-700 dark:text-gray-300">Usuario<span className="text-rose-500">*</span></label>
               <input
-                className={formValues.errors.password ? inputErrorClasses : inputClasses}
-                type={mostrarContrasena ? 'text' : 'password'}
-                placeholder="●●●●●●●"
-                id="confirmPassword"
-                name="confirmPassword"
-                value={formValues.confirmPassword || ''}
+                className={formValues.errors.username ? inputErrorClasses : inputClasses}
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Escribir"
+                value={formValues.username}
                 onChange={handleChange}
                 required
               />
-              <button
-                type="button"
-                onClick={() => setMostrarContrasena(!mostrarContrasena)}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 focus:outline-none transition-opacity cursor-pointer"
-              >
-                <img
-                  src={ojoIcon}
-                  alt={mostrarContrasena ? 'Ocultar' : 'Mostrar'}
-                  className={`w-5 h-5 ${mostrarContrasena ? 'opacity-100' : 'opacity-60'}`}
+              {formValues.errors.username && (
+                <p className="text-rose-500 text-xs">{formValues.errors.username}</p>
+              )}
+            </fieldset>
+
+            <fieldset className="flex flex-col gap-1.5 mt-4">
+              <label htmlFor="password" className="text-sm font-medium text-gray-700 dark:text-gray-300">Contraseña<span className="text-rose-500">*</span></label>
+              <div className="relative w-full">
+                <input
+                  className={formValues.errors.password ? inputErrorClasses : inputClasses}
+                  type={mostrarContrasena ? 'text' : 'password'}
+                  id="password"
+                  name="password"
+                  placeholder="●●●●●●●"
+                  value={formValues.password}
+                  onChange={handleChange}
+                  required
                 />
-              </button>
+                <button
+                  type="button"
+                  onClick={() => setMostrarContrasena(!mostrarContrasena)}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 focus:outline-none transition-opacity cursor-pointer"
+                >
+                  <img
+                    src={ojoIcon}
+                    alt={mostrarContrasena ? 'Ocultar' : 'Mostrar'}
+                    className={`w-5 h-5 dark:invert ${mostrarContrasena ? 'opacity-100' : 'opacity-50'}`}
+                  />
+                </button>
+              </div>
+              {formValues.errors.password && (
+                <p className="text-rose-500 text-xs">{formValues.errors.password}</p>
+              )}
+            </fieldset>
+
+            {modo.mostrarConfirmarContrasena && (
+              <fieldset className="flex flex-col gap-1.5 mt-4">
+                <label htmlFor="confirmPassword" className="text-sm font-medium text-gray-700 dark:text-gray-300">Confirmar contraseña<span className="text-rose-500">*</span></label>
+                <div className="relative w-full">
+                  <input
+                    className={formValues.errors.password ? inputErrorClasses : inputClasses}
+                    type={mostrarContrasena ? 'text' : 'password'}
+                    placeholder="●●●●●●●"
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    value={formValues.confirmPassword || ''}
+                    onChange={handleChange}
+                    required
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setMostrarContrasena(!mostrarContrasena)}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 focus:outline-none transition-opacity cursor-pointer"
+                  >
+                    <img
+                      src={ojoIcon}
+                      alt={mostrarContrasena ? 'Ocultar' : 'Mostrar'}
+                      className={`w-5 h-5 dark:invert ${mostrarContrasena ? 'opacity-100' : 'opacity-50'}`}
+                    />
+                  </button>
+                </div>
+              </fieldset>
+            )}
+
+            {error && <p className="text-rose-500 text-xs text-center mt-2">{error}</p>}
+
+            <div className="mt-6">
+              <Boton tipo="pildora" onClick={handleSubmit}>
+                {modo.textoDelBoton}
+              </Boton>
             </div>
-          </fieldset>
-        )}
+          </form>
 
-        {error && <p className="text-red-500 text-sm text-center mb-4">{error}</p>}
-
-        <div className="px-4 mb-4">
-          <Boton tipo="pildora" onClick={handleSubmit}>
-            {modo.textoDelBoton}
-          </Boton>
-        </div>
-      </form>
-
-      <div className="text-center text-sm text-gray-600 p-4 mt-4">
-        <span>{modo.footerText} <Link to={modo.footerLinkTo}>{modo.footerLinkText}</Link></span>
+          <div className="text-center text-sm text-gray-500 dark:text-gray-400 mt-6">
+            <span>{modo.footerText} <Link to={modo.footerLinkTo} className="text-rose-600 dark:text-rose-400 font-medium hover:underline">{modo.footerLinkText}</Link></span>
+          </div>
+        </section>
       </div>
-    </section>
+    </div>
   )
 }

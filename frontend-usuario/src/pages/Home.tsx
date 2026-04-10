@@ -51,11 +51,11 @@ export const Home = () => {
       />
     )
   return (
-    <section data-testid="home-container" className="flex flex-col bg-white min-h-screen font-sans">
+    <section data-testid="home-container" className="flex flex-col bg-white dark:bg-gray-800 transition-colors duration-300 min-h-screen font-sans">
       <HeaderHome label="Delivery" />
       <SearchBar onSearch={handleSearch} />
       <div className="px-4 mt-2">
-        <h2 className="text-lg font-semibold mb-3 text-gray-800">Locales de comidas</h2>
+        <h2 className="text-lg font-semibold mb-3 text-gray-800 dark:text-gray-100">Locales de comidas</h2>
 
         <React.Suspense fallback={<p>Cargando locales...</p>}>
           <div data-testid="locales-list" className="flex flex-wrap justify-between gap-y-4">

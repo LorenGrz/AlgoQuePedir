@@ -73,8 +73,8 @@ export const PerfilUsuarioLayout = () => {
   if (error) return <ErrorCard error={error} onRetry={() => window.location.reload()} />
 
   return (
-    <div className="flex justify-center">
-      <div className="flex flex-col bg-white font-sans w-full max-w-5xl">
+    <div className="flex justify-center bg-white dark:bg-gray-800 transition-colors duration-300 min-h-screen">
+      <div className="flex flex-col font-sans w-full max-w-5xl">
         <Outlet context={{usuario, setUsuario, onSubmit }} />
       </div>
     </div>

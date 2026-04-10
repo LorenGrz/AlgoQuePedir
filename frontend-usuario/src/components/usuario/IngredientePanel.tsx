@@ -48,16 +48,16 @@ export const IngredientePanel = ({isPreferidos}: Props) => {
           <div>
             {/* se puede componentizar */}
             {ingredientes.map((ing) => (
-              <div className="cursor-pointer flex w-full justify-between py-2 " key={`ing-${ing.id}-${ing.nombre}`}>
+              <div className="cursor-pointer flex w-full justify-between py-2 text-gray-900 dark:text-gray-100" key={`ing-${ing.id}-${ing.nombre}`}>
                 {ing.nombre}
-                <img src={xIcon} alt="Eliminar" onClick={() => eliminarIng(ing)} />
+                <img src={xIcon} alt="Eliminar" onClick={() => eliminarIng(ing)} className="dark:invert w-5 opacity-60 hover:opacity-100" />
               </div>
             ))}
           </div>
         </section>
       </div>
 
-      <div className="p-4  bg-white">
+      <div className="p-4 bg-white dark:bg-gray-800 border-t border-gray-100 dark:border-gray-700 mt-auto transition-colors duration-300">
         <Boton tipo="primario" onClick={() => {setShowModal(true)}}>Añadir Ingrediente</Boton>
       </div>
 

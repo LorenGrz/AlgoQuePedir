@@ -8,5 +8,4 @@ import org.springframework.stereotype.Component
 
 @Component
 class PedidoRepository(searchStrategy: SearchStrategy<Pedido> = PedidoSearchStrategy()) : Repositorio<Pedido>(searchStrategy) {
-
 }

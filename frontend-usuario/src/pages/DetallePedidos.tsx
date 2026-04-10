@@ -79,12 +79,12 @@ export const DetallePedidos = () => {
       />
     )
   return (
-    <div className="flex flex-col min-h-screen font-sans p-4 gap-3 bg-gray-50">
+    <div className="flex flex-col min-h-screen font-sans bg-gray-50 dark:bg-gray-900 transition-colors duration-300 pb-16">
       <Header label="Mis Pedidos" />
 
       <Tabs tabs={tabs} active={activeTab} onChange={handleTabChange} />
 
-      <main className="flex-1">
+      <main className="flex-1 px-4 pt-4">
         {loading && <Spinner />}
 
         {error && (

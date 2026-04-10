@@ -13,10 +13,10 @@ export const Boton = ({ tipo = 'primario', children, onClick, disabled, classNam
   const base = className || defaultBase
 
   const variantes = {
-    primario: 'bg-red-600 text-white hover:bg-red-700',
-    secundario: 'bg-white border text-gray-700 hover:bg-gray-100',
-    gris: 'bg-gray-200 text-gray-800 hover:bg-gray-300',
-    pildora: 'bg-red-600 text-white hover:bg-red-700 rounded-b-full rounded-t-full',
+    primario: 'bg-rose-600 text-white hover:bg-rose-700 active:bg-rose-800',
+    secundario: 'bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600',
+    gris: 'bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600 border border-gray-200 dark:border-gray-600',
+    pildora: 'bg-rose-600 text-white hover:bg-rose-700 rounded-b-full rounded-t-full',
     imagen: 'p-1',
     custom: ''
   }

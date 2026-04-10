@@ -10,14 +10,14 @@ import filledPerfil from 'src/assets/icons/user-fill.svg'
 
 export const NavbarInferior = () => {
   return (
-    <section className="flex justify-center bg-gray-50">
-      <nav className="fixed bottom-0 h-20 bg-white border-t border-gray-200  max-w-2xl w-full">
-        <ul className="flex justify-around items-center pb-2 pt-5">
+    <section className="flex justify-center bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+      <nav className="fixed bottom-0 h-[56px] bg-white dark:bg-gray-800/95 backdrop-blur-sm border-t border-gray-100 dark:border-gray-700 max-w-2xl w-full transition-colors duration-300 z-50">
+        <ul className="flex justify-around items-center h-full px-2">
           <li>
-            <NavLink to="/home" className="flex flex-col items-center justify-center">
+            <NavLink to="/home" className={({ isActive }) => `flex flex-col items-center justify-center transition-colors ${isActive ? 'text-rose-600 dark:text-rose-400' : 'text-gray-600 dark:text-gray-300'}`}>
               {({ isActive }) => (
                 <>
-                  <img src={isActive ? filledHome : homeIcon} alt="Inicio" />
+                  <img src={isActive ? filledHome : homeIcon} alt="Inicio" className="dark:invert mb-1" />
                   Inicio
                 </>
               )}
@@ -26,31 +26,31 @@ export const NavbarInferior = () => {
           <li>
             <NavLink
               to="/detalle-pedidos/estado/Pendiente"
-              className="flex flex-col items-center justify-center"
+              className={({ isActive }) => `flex flex-col items-center justify-center transition-colors ${isActive ? 'text-rose-600 dark:text-rose-400' : 'text-gray-600 dark:text-gray-300'}`}
             >
               {({ isActive }) => (
                 <>
-                  <img src={isActive ? filledPedidos : pedidosIcon} alt="Pedidos" />
+                  <img src={isActive ? filledPedidos : pedidosIcon} alt="Pedidos" className="dark:invert mb-1" />
                   Pedidos
                 </>
               )}
             </NavLink>
           </li>
           <li>
-            <NavLink to="/calificaciones" className="flex flex-col items-center justify-center">
+            <NavLink to="/calificaciones" className={({ isActive }) => `flex flex-col items-center justify-center transition-colors ${isActive ? 'text-rose-600 dark:text-rose-400' : 'text-gray-600 dark:text-gray-300'}`}>
               {({ isActive }) => (
                 <>
-                  <img src={isActive ? filledCalificar : calificarIcon} alt="Calificar" />
+                  <img src={isActive ? filledCalificar : calificarIcon} alt="Calificar" className="dark:invert mb-1" />
                   Calificar
                 </>
               )}
             </NavLink>
           </li>
           <li>
-            <NavLink to="/usuario/perfil" className="flex flex-col items-center justify-center">
+            <NavLink to="/usuario/perfil" className={({ isActive }) => `flex flex-col items-center justify-center transition-colors ${isActive ? 'text-rose-600 dark:text-rose-400' : 'text-gray-600 dark:text-gray-300'}`}>
               {({ isActive }) => (
                 <>
-                  <img src={isActive ? filledPerfil : perfilIcon} alt="Perfil" />
+                  <img src={isActive ? filledPerfil : perfilIcon} alt="Perfil" className="dark:invert mb-1" />
                   Perfil
                 </>
               )}

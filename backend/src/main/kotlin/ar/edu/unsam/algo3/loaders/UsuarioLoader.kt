@@ -64,7 +64,7 @@ class UsuarioLoader(
             direccion = direccionLuis, id = 3,
             imgUrl = "https://avatars.githubusercontent.com/u/113392231?v=4"
         ).apply {
-            password = "luis123"
+                password = "luis123"
             fechaNacimiento = LocalDate.of(1995, 11, 2)
             distanciaMaximaCercania = 5.0
             ingredientesPreferidos = mutableSetOf(ingredientes[0], ingredientes[1], ingredientes[2])
