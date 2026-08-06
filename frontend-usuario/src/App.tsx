@@ -32,7 +32,7 @@ const AppShell = ({ children }: { children: React.ReactNode }) => (
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <ToastContainer position="top-right" />
       <Routes>
         {/* Rutas de autenticación: pantalla completa, sin la caja estrecha */}
